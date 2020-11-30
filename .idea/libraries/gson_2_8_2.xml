@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="gson-2.8.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/production/SRMS/WEB-INF/lib/gson-2.8.2.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../Program Files/Tomcat/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../Program Files/Tomcat/lib" recursive="false" />
+  </library>
+</component>

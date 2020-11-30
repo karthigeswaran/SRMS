@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/home.js"></script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body onload="studentForm()">
+        <ul id="menu">
+            <li><h2>MENU</h2></li>
+            <li><span style="cursor:pointer" onclick="studentForm()">ADD STUDENT</span> </li><br><br>
+            <li><span style="cursor:pointer" onclick="studentList()">LIST STUDENTS</span> </li><br><br>
+        </ul>
+        <div style="margin-left:25%;padding:1px 16px;height:1000px;" >
+            <template id="studentForm">
+                <div id="FormForNewStudent">
+                    <h2>Create New Student Record</h2>
+                    <div>
+                        <label for="name">Name:</label><br>
+                        <input id="name" ondblclick="empty(this)" type="text" value=""><br>
+                        <label for="class">Class:</label><br>
+                        <input id="class" type="number" ondblclick="empty(this)" value=""><br>
+                        <label for="section">Section:</label><br>
+                        <input id="section" type="text" ondblclick="empty(this)" value=""><br>
+                        <label for="dob">Date of Birth:</label><br>
+                        <input id="dob" type="date" ondblclick="empty(this)" value=""><br>
+                        <label for="roll_no">Roll No.:</label><br>
+                        <input id="roll_no" type="number" ondblclick="empty(this)" value=""><br><br>
+                        <button onclick="submitForm()">Submit</button>
+                    </div>
+                </div>
+            </template>
+            <template id="studentList">
+            <div>
+                <label>Name:</label>
+                <span class="name">____</span>
+                <label>Class:</label>
+                <span class="class">____</span>
+                <label>Section:</label>
+                <span class="section">____</span>
+                <button class="view" onclick="view(this.parentNode)">view</button>
+                <button class="edit" onclick="edit(this.parentNode)">edit</button>
+                <button class="delete" onclick="delete(this.parentNode)">delete</button>
+            </div>
+            </template>
+            <div id="display">
+
+            </div>
+        </div>
+    </body>
+</html>
