@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>login_verification</servlet-name>
-        <servlet-class>com.karthi.handler.LoginHandler</servlet-class>
+        <servlet-class>com.karthi.servlet.LoginServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -16,7 +16,7 @@
 
     <servlet>
         <servlet-name>studentCRUD</servlet-name>
-        <servlet-class>com.karthi.handler.StudentHandler</servlet-class>
+        <servlet-class>com.karthi.servlet.StudentServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
