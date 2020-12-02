@@ -1,4 +1,4 @@
 package com.karthi.handler;
 
-public class StudentHandler {
+public class RecordHandler {
 }

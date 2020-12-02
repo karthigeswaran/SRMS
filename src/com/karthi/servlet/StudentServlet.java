@@ -1,7 +1,7 @@
 package com.karthi.servlet;
 
 import com.google.gson.Gson;
-import com.karthi.record.Student;
+import com.karthi.model.Student;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
