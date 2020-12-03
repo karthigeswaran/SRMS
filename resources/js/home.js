@@ -12,9 +12,9 @@ function studentForm(){
 function submitForm(){
     var newStudent = {};
     newStudent.name = document.getElementById("name").value;
-    newStudent.class = document.getElementById("class").value;
+    newStudent.className = document.getElementById("class").value;
     newStudent.section = document.getElementById("section").value;
-    newStudent.dateOfBirth = document.getElementById("dob").value;
+    newStudent.dob = document.getElementById("dob").value;
     newStudent.rollNo = document.getElementById("roll_no").value;
     if(newStudent.name==""||newStudent.class==""||newStudent.section==""||newStudent.dateOfBirth==""||newStudent.rollNo==""){
         alert("One or more fields are empty");

@@ -7,14 +7,14 @@ public class Student {
     private Integer className;
     private Character section;
     private LocalDate dob;
-    private Integer roll_no;
+    private Integer rollNo;
 
-    public Student(String name, Integer className, Character section, LocalDate dob, Integer roll_no) {
+    public Student(String name, Integer className, Character section, LocalDate dob, Integer rollNo) {
         this.name = name;
         this.className = className;
         this.section = section;
         this.dob = dob;
-        this.roll_no = roll_no;
+        this.rollNo = rollNo;
     }
 
     public void setName(String name) {
@@ -49,12 +49,12 @@ public class Student {
         return dob;
     }
 
-    public void setRoll_no(Integer roll_no) {
-        this.roll_no = roll_no;
+    public void setRollNo(Integer rollNo) {
+        this.rollNo = rollNo;
     }
 
-    public Integer getRoll_no() {
-        return roll_no;
+    public Integer getRollNo() {
+        return rollNo;
     }
 
     public boolean equals(Student student) {
@@ -65,6 +65,6 @@ public class Student {
                 className.equals(student.getClassName()) &&
                 section.equals(student.getSection()) &&
                 dob.equals(student.getDob()) &&
-                roll_no.equals(student.getRoll_no());
+                rollNo.equals(student.getRollNo());
     }
 }

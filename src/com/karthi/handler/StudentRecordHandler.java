@@ -18,6 +18,7 @@ public class StudentRecordHandler {
 
     private void openConnection(){
         try{
+            Class.forName(JDBC_driver);
             connection = DriverManager.getConnection(DB_URL,USER,PASS);
         }catch(Exception e) {
             e.printStackTrace();
@@ -33,8 +34,6 @@ public class StudentRecordHandler {
             return false;
         }
         try{
-            connection.setAutoCommit(false);
-            Savepoint savepoint = connection.setSavepoint();
             statement = connection.createStatement();
             command = "INSERT INTO student "+
                     "VALUE ("+
@@ -42,16 +41,34 @@ public class StudentRecordHandler {
                     student.getClassName()+","+
                     student.getSection()+","+
                     Date.valueOf(student.getDob())+","+
-                    student.getRoll_no()+");";
+                    student.getRollNo()+");";
             int rowCount = statement.executeUpdate(command);
-            if(rowCount==0){
+            if(rowCount==0) {
+                closeConnection();
                 return false;
             }
         }catch(Exception e){
             e.printStackTrace();
             return false;
         }
+        closeConnection();
         return true;
     }
 
+    private Boolean closeConnection(){
+        try{
+
+            if(statement!=null){
+                statement.close();
+            }
+
+            if(connection!=null){
+                connection.close();
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }

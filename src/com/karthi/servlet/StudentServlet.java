@@ -14,7 +14,6 @@ public class StudentServlet extends HttpServlet{
         String str = request.getReader().readLine();
         Gson gson = new Gson();
         Student student = gson.fromJson(str,Student.class);
-        response.getOutputStream().print("successful");
         StudentRecordHandler studentRecordHandler = new StudentRecordHandler();
         if(studentRecordHandler.createStudent(student)){
             response.setStatus(200);

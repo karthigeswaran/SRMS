@@ -15,7 +15,7 @@ public class LoginServlet extends HttpServlet{
         if(user.isUser(admin)){
             HttpSession session = request.getSession();
             session.setAttribute("user","admin");
-            session.setMaxInactiveInterval(2*60);
+            session.setMaxInactiveInterval(20*60);
             response.addHeader("redirect","home.html");
             //redirect to home page
         }else {
